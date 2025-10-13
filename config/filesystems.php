@@ -47,6 +47,14 @@ return [
             'report' => false,
         ],
 
+         // custom langsung ke public/
+        'public_folder' => [
+            'driver' => 'local',
+            'root' => public_path(),   // 👈 ini langsung ke folder public
+            'url' => env('APP_URL'),
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
