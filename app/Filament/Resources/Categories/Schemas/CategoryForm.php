@@ -19,7 +19,7 @@ class CategoryForm
                     ->label('Nama')
                     ->required(),
 
-                FileUpload::make('gambar')
+                FileUpload::make('images')
                     ->disk('public_folder')
                     ->directory(fn ($record) => $record?->id 
                         ? "media/category/{$record->id}" 

@@ -34,7 +34,7 @@ class PlaceForm
                     ->required(),
 
 
-                FileUpload::make('gambar')
+                FileUpload::make('images')
                     ->disk('public_folder')
                     ->directory(fn ($record) => $record?->id 
                         ? "media/place/{$record->id}" 
