@@ -24,11 +24,18 @@ class PlacesTable
                     ->searchable()
                     ->formatStateUsing(fn ($state) => Str::limit($state, 20))
                     ->sortable(),
+                
 
                 TextColumn::make('descriptions')
                     ->label('Deskripsi')
                     ->html()
                     ->formatStateUsing(fn ($state) => Str::limit(strip_tags($state), 50))
+                    ->sortable(),
+                    
+                TextColumn::make('address')
+                    ->label(' Alamat')
+                    ->searchable()
+                    ->formatStateUsing(fn ($state) => Str::limit($state, 20))
                     ->sortable(),
 
                 TextColumn::make('created_at')

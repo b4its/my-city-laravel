@@ -21,16 +21,18 @@ class PlaceForm
                     ->label('Nama')
                     ->required(),
                 
-        
                 RichEditor::make('descriptions')   // built-in, TipTap
                     ->label('Deskripsi')
                     ->columnSpanFull()
                     ->required(),
 
+                TextInput::make('address')
+                    ->label('Alamat')
+                    ->required(),
+
                 Select::make('idCategory')
                     ->label('Category')
                     ->relationship('category', 'name')
-                    ->searchable()
                     ->required(),
 
 

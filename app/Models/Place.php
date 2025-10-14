@@ -14,6 +14,7 @@ class Place extends Model
     protected $fillable = [
         'name',
         'descriptions',
+        'address',
         'images',
         'idCategory',
     ];

@@ -31,7 +31,7 @@ class CategoryForm
                         $id = $record?->id ?? 'new'; // fallback kalau belum ada id
                         return "category_{$datetime}_{$id}.{$ext}";
                     })
-                    ->visibility('public')
+                    ->visibility('public')  
                     ->preserveFilenames(false) // biar selalu generate nama sesuai fungsi di atas
                     ->deleteUploadedFileUsing(fn ($file) => Storage::disk('public_folder')->delete($file))
             ]);
